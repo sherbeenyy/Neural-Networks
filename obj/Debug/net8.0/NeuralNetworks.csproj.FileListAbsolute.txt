@@ -1,0 +1,14 @@
+G:\Neural-Networks\NeuralNetworks\bin\Debug\net8.0\NeuralNetworks.exe
+G:\Neural-Networks\NeuralNetworks\bin\Debug\net8.0\NeuralNetworks.deps.json
+G:\Neural-Networks\NeuralNetworks\bin\Debug\net8.0\NeuralNetworks.runtimeconfig.json
+G:\Neural-Networks\NeuralNetworks\bin\Debug\net8.0\NeuralNetworks.dll
+G:\Neural-Networks\NeuralNetworks\bin\Debug\net8.0\NeuralNetworks.pdb
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.GeneratedMSBuildEditorConfig.editorconfig
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.AssemblyInfoInputs.cache
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.AssemblyInfo.cs
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.csproj.CoreCompileInputs.cache
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.dll
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\refint\NeuralNetworks.dll
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.pdb
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.genruntimeconfig.cache
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\ref\NeuralNetworks.dll
