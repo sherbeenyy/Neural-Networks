@@ -10,6 +10,10 @@ class Layer {
   bias = new double[nodesOut];
  }
 
+public double activation(double input) {
+  return 1 / (1 + Math.Exp(-input));
+}
+
  public double [] forward (double [] input) {
   double [] output = new double[_nodesOut];
   for (int i = 0; i < _nodesOut; i++) {
@@ -18,6 +22,7 @@ class Layer {
     output[i] += input[j] * weights[j , i];
    }
    output[i] += bias[i];
+   output[i] = activation(output[i]);
   }
   return output;
  }
