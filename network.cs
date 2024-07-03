@@ -1,9 +1,9 @@
+
 class Network {
 
 Random rand = new Random();
-double [][][] weights;
-double [] bias;
-int [] neurons;
+float [][][] weights;
+float [][][] bias;
 int [] layers;
 
 
@@ -17,30 +17,35 @@ public Network( int [] layers)
 
 private void initWeights()
     {
-        weights = new double[layers.Length - 1][][];
+        weights = new float[layers.Length - 1][][];
         for (int i = 0; i < weights.Length; i++)
         {
-            weights[i] = new double[layers[i + 1]][];
+            weights[i] = new float[layers[i + 1]][];
             for (int j = 0; j < layers[i + 1]; j++)
             {
-                weights[i][j] = new double[layers[i]];
+                weights[i][j] = new float[layers[i]];
                 for (int k = 0; k < layers[i]; k++)
                 {
-                        weights[i][j][k] = rand.NextDouble();
+                        weights[i][j][k] = (float)rand.NextDouble();
                 }
             }
         }
     }
-
-private initBias(){
-
-    bias = new double[layers.Length - 1];
-    for (int i = 0; i < bias.Length; i++)
-    {
-        bias[i] = rand.NextDouble();
-    }
+private  void initBias(){
+    bias = new float[layers.Length - 1][][];
+        for (int i = 0; i < weights.Length; i++)
+        {
+            bias[i] = new float[layers[i + 1]][];
+            for (int j = 0; j < layers[i + 1]; j++)
+            {
+                bias[i][j] = new float[layers[i]];
+                for (int k = 0; k < layers[i]; k++)
+                {
+                        bias[i][j][k] = (float)rand.NextDouble();
+                }
+            }
+        }
 }
-
 public void display_weights()
 {
     for (int i = 0; i < weights.Length; i++)
@@ -55,4 +60,20 @@ public void display_weights()
         }
     }
 }
+public void display_bias()
+{
+    for (int i = 0; i < bias.Length; i++)
+    {
+        for (int j = 0; j < bias[i].Length; j++)
+        {
+            for (int k = 0; k < bias[i][j].Length; k++)
+            {
+                Console.WriteLine(bias[i][j][k]);
+
+            }
+        }
+    }
+}
+
+
 }
