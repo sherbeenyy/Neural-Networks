@@ -12,3 +12,4 @@ G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\refint\NeuralNetworks.dll
 G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.pdb
 G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.genruntimeconfig.cache
 G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\ref\NeuralNetworks.dll
+G:\Neural-Networks\NeuralNetworks\obj\Debug\net8.0\NeuralNetworks.sourcelink.json
