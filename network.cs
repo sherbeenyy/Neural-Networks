@@ -10,7 +10,7 @@ public Network(int numOfInputs, int numOfHidden, int numOfOutputs){
     {
         input_layer = new Neuron[numOfInputs];
         hidden_layer = new Neuron[numOfHidden];
-         output_layer = new Neuron[numOfOutputs];
+        output_layer = new Neuron[numOfOutputs];
 
         for (int i = 0; i < numOfInputs; i++)
         {
@@ -48,7 +48,7 @@ private double reLU_derivative(double function)
 }
 
 
-public double[] feedForward(double[] inputs)
+public double[] feedForward(double[] inputs, string activation)
 {
     
     for (int i = 0; i < hidden_layer.Length; i++)
@@ -59,17 +59,22 @@ public double[] feedForward(double[] inputs)
             sum += inputs[j] * hidden_layer[i].Weights[j];
         }
         sum += hidden_layer[i].Bias;
-        hidden_layer[i].Output = sigmoid(sum);
+        if (activation == "sigmoid")
+            hidden_layer[i].Output = sigmoid(sum);
+        else if (activation == "reLU")
+            hidden_layer[i].Output = reLU(sum);
     }
     return hidden_layer.Select(neuron => neuron.Output).ToArray();
 }
 
-public double costFunction(double[] inputs, double[] expected)
+public double costFunction(double[] inputs, double[] expected, string activation)
 {
-    double[] output = feedForward(inputs);
+    double[] output = feedForward(inputs, activation);
     double cost = 0;
     for (int i = 0; i < output.Length; i++)
     {
+        // Mean Squared Error
+        //addning more types of cost functions
         cost += Math.Pow(output[i] - expected[i], 2);
     }
     return cost;
