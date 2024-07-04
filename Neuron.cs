@@ -3,8 +3,6 @@ class Neuron
     public double[] Weights;
     public double Bias;
     public double Output;
-    public double Delta;
-
     public Neuron(int numOfInputs)
     {
         Random r = new Random();
