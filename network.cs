@@ -63,4 +63,15 @@ public double[] feedForward(double[] inputs)
     }
     return hidden_layer.Select(neuron => neuron.Output).ToArray();
 }
+
+public double costFunction(double[] inputs, double[] expected)
+{
+    double[] output = feedForward(inputs);
+    double cost = 0;
+    for (int i = 0; i < output.Length; i++)
+    {
+        cost += Math.Pow(output[i] - expected[i], 2);
+    }
+    return cost;
+}
 }
